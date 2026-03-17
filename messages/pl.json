@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "modules": "Moduły",
+    "caseStudies": "Case Studies",
+    "pricing": "Cennik",
+    "signIn": "Zaloguj",
+    "startFree": "Rozpocznij za darmo"
+  },
+  "Hero": {
+    "badge": "MABI — Moving Ahead by Innovation",
+    "title1": "AI, które",
+    "title2": "widzi i myśli.",
+    "subtitle1": "Platforma, która łączy PIM, CRM, MES, WMS, Finanse i AI w jeden organizm.",
+    "subtitle2": "System, który nie tylko przechowuje dane, ale analizuje je i sugeruje decyzje.",
+    "startFree": "Rozpocznij za darmo",
+    "watchDemo": "Zobacz demo",
+    "aiHub": "AI Hub",
+    "aiHubDesc": "Analiza danych w czasie rzeczywistym",
+    "aiBadge": "AI",
+    "budgetAnalysis": "Analiza budżetu",
+    "urBudget": "Dział UR: 87% budżetu",
+    "warning": "Magazyn",
+    "bearingWarning": "Łożysk zostało na 3 dni. Zamówić automatycznie?",
+    "statsLabel": "Już <span className=\"font-bold text-white\">17,500+</span> produktów w MABI"
+  }
+}

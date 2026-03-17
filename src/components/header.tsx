@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./language-toggle";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 
@@ -9,6 +10,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModulesOpen, setIsModulesOpen] = useState(false); // For mobile
+  const t = useTranslations("Header");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,13 +58,13 @@ export function Header() {
           {/* Modules Dropdown */}
           <div className="relative group">
             <button className="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-white transition-colors py-4">
-              Moduły <ChevronDown size={14} />
+              {t("modules")} <ChevronDown size={14} />
             </button>
             <div className="absolute top-full left-0 w-[400px] bg-black border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-4 grid grid-cols-2 gap-2">
               {modules.map((module, i) => (
                 <Link 
                   key={i} 
-                  href={module.link} 
+                  href={module.link as any} 
                   className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 >
                   {module.title}
@@ -75,7 +77,7 @@ export function Header() {
             Funkcje
           </Link>
           <Link href="/cennik" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Cennik
+            {t("pricing")}
           </Link>
           <Link href="/demo" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             Demo
@@ -91,7 +93,7 @@ export function Header() {
             href="/demo"
             className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
           >
-            Rozpocznij
+            {t("startFree")}
           </Link>
         </div>
 
@@ -114,7 +116,7 @@ export function Header() {
               onClick={() => setIsModulesOpen(!isModulesOpen)}
               className="flex items-center justify-between w-full text-lg font-medium text-gray-300 hover:text-white mb-2"
             >
-              Moduły <ChevronDown size={18} className={`transform transition-transform ${isModulesOpen ? 'rotate-180' : ''}`} />
+              {t("modules")} <ChevronDown size={18} className={`transform transition-transform ${isModulesOpen ? 'rotate-180' : ''}`} />
             </button>
             
             {isModulesOpen && (
@@ -122,7 +124,7 @@ export function Header() {
                 {modules.map((module, i) => (
                   <Link 
                     key={i} 
-                    href={module.link} 
+                    href={module.link as any} 
                     className="block text-base text-gray-400 hover:text-white py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -145,7 +147,7 @@ export function Header() {
             className="text-lg font-medium text-gray-300 hover:text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Cennik
+            {t("pricing")}
           </Link>
           <Link 
             href="/demo" 
@@ -169,7 +171,7 @@ export function Header() {
               className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Rozpocznij
+              {t("startFree")}
             </Link>
           </div>
         </div>

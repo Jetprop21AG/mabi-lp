@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight, Check, X, Quote, ChevronRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";

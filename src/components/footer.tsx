@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Twitter, Linkedin, Github } from "lucide-react";
 
 export function Footer() {

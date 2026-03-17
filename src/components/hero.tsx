@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { ArrowRight, Play } from "lucide-react";
 
 export function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden">
       {/* Background Effects */}
@@ -24,7 +27,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
           </span>
-          MABI — Moving Ahead by Innovation
+          {t("badge")}
         </motion.div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
@@ -33,7 +36,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            AI, które
+            {t("title1")}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +44,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
           >
-            widzi i myśli.
+            {t("title2")}
           </motion.div>
         </h1>
 
@@ -52,10 +55,10 @@ export function Hero() {
           className="max-w-3xl mx-auto mb-10 space-y-4"
         >
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-             Platforma, która łączy PIM, CRM, MES, WMS, Finanse i AI w jeden organizm.
+             {t("subtitle1")}
           </p>
           <p className="text-lg text-gray-500">
-             System, który nie tylko przechowuje dane, ale analizuje je i sugeruje decyzje.
+             {t("subtitle2")}
           </p>
         </motion.div>
 
@@ -69,14 +72,14 @@ export function Hero() {
             href="/demo"
             className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-blue-900/20"
           >
-            Rozpocznij za darmo
+            {t("startFree")}
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <button
             className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm cursor-pointer"
           >
             <Play size={20} className="fill-current" />
-            Zobacz demo
+            {t("watchDemo")}
           </button>
         </motion.div>
 
@@ -100,29 +103,29 @@ export function Hero() {
                 <div className="w-24 h-24 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4 border border-red-500/20 animate-pulse">
                     <span className="text-4xl">🧠</span>
                 </div>
-                <h3 className="text-xl font-medium text-gray-300">AI Hub</h3>
-                <p className="text-sm text-gray-500 mt-2">Analiza danych w czasie rzeczywistym</p>
+                <h3 className="text-xl font-medium text-gray-300">{t("aiHub")}</h3>
+                <p className="text-sm text-gray-500 mt-2">{t("aiHubDesc")}</p>
               </div>
             </div>
             
             {/* Floating Elements (Parallax feel) */}
             <div className="hidden md:block absolute top-20 right-20 w-64 p-4 rounded-lg bg-black/80 border border-white/10 backdrop-blur-md shadow-xl">
                 <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs">AI</div>
-                    <div className="text-sm font-medium">Analiza budżetu</div>
+                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs">{t("aiBadge")}</div>
+                    <div className="text-sm font-medium">{t("budgetAnalysis")}</div>
                 </div>
                 <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                     <div className="h-full w-3/4 bg-blue-500"></div>
                 </div>
-                <div className="mt-2 text-xs text-gray-500 text-right">Dział UR: 87% budżetu</div>
+                <div className="mt-2 text-xs text-gray-500 text-right">{t("urBudget")}</div>
             </div>
 
             <div className="hidden md:block absolute bottom-10 left-10 w-64 p-4 rounded-lg bg-black/80 border border-white/10 backdrop-blur-md shadow-xl">
                 <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs">⚠️</div>
-                    <div className="text-sm font-medium">Magazyn</div>
+                    <div className="text-sm font-medium">{t("warning")}</div>
                 </div>
-                <p className="text-xs text-gray-400">Łożysk zostało na 3 dni. Zamówić automatycznie?</p>
+                <p className="text-xs text-gray-400">{t("bearingWarning")}</p>
             </div>
           </div>
           
@@ -138,9 +141,7 @@ export function Hero() {
               <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-black flex items-center justify-center text-xs text-white">MK</div>
               <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-black flex items-center justify-center text-xs text-white">+5</div>
             </div>
-            <p className="text-sm text-gray-300">
-              Już <span className="font-bold text-white">17,500+</span> produktów w MABI
-            </p>
+            <p className="text-sm text-gray-300" dangerouslySetInnerHTML={{ __html: t.raw("statsLabel") }} />
           </motion.div>
         </motion.div>
       </div>

@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "modules": "Modules",
+    "caseStudies": "Case Studies",
+    "pricing": "Pricing",
+    "signIn": "Sign In",
+    "startFree": "Start for free"
+  },
+  "Hero": {
+    "badge": "MABI — Moving Ahead by Innovation",
+    "title1": "AI that",
+    "title2": "sees and thinks.",
+    "subtitle1": "The platform that unifies PIM, CRM, MES, WMS, Finance, and AI into one organism.",
+    "subtitle2": "A system that doesn't just store data, but analyzes it and suggests decisions.",
+    "startFree": "Start for free",
+    "watchDemo": "Watch demo",
+    "aiHub": "AI Hub",
+    "aiHubDesc": "Real-time data analysis",
+    "aiBadge": "AI",
+    "budgetAnalysis": "Budget Analysis",
+    "urBudget": "Maintenance Dept: 87% of budget",
+    "warning": "Warehouse",
+    "bearingWarning": "Bearings left for 3 days. Order automatically?",
+    "statsLabel": "Over <span className=\"font-bold text-white\">17,500+</span> products in MABI already"
+  }
+}
