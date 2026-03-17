@@ -141,7 +141,7 @@ export function Hero() {
               <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-black flex items-center justify-center text-xs text-white">MK</div>
               <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-black flex items-center justify-center text-xs text-white">+5</div>
             </div>
-            <p className="text-sm text-gray-300" dangerouslySetInnerHTML={{ __html: t.raw("statsLabel") }} />
+            <p className="text-sm text-gray-300">{t("statsPrefix")} <span className="font-bold text-white">{t("statsNumber")}</span> {t("statsSuffix")}</p>
           </motion.div>
         </motion.div>
       </div>

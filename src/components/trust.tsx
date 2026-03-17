@@ -1,26 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Check, ShieldCheck, Globe, Smartphone, Clock, RefreshCw } from "lucide-react";
 
 export function Trust() {
+  const t = useTranslations("Trust");
   const stats = [
-    { value: "17,500+", label: "Zarządzanych SKU" },
-    { value: "16", label: "Zintegrowanych modułów" },
-    { value: "6", label: "AI obserwatorów 24/7" },
-    { value: "105+", label: "API endpoints" },
-    { value: "236k+", label: "Linii kodu" },
-    { value: "9", label: "Języków produktowych" },
-    { value: "0s", label: "Przełączania systemów" },
+    { value: "17,500+", labelKey: "sku" },
+    { value: "16", labelKey: "modules" },
+    { value: "6", labelKey: "aiWatchers" },
+    { value: "105+", labelKey: "apiEndpoints" },
+    { value: "236k+", labelKey: "codeLines" },
+    { value: "9", labelKey: "languages" },
+    { value: "0s", labelKey: "noSwitch" },
   ];
 
   const features = [
-    { icon: ShieldCheck, text: "Dane w Polsce (Hetzner DE)" },
-    { icon: Globe, text: "Polski interface, KSeF, KŚT, JPK" },
-    { icon: Smartphone, text: "PWA: działa na telefonie, tablecie, PDA" },
-    { icon: Clock, text: "Wdrożenie od 2 tygodni" },
-    { icon: RefreshCw, text: "Migracja z Comarch / SAP / HubSpot" },
-    { icon: Check, text: "AI: LangGraph + Claude Sonnet 4.6" },
+    { icon: ShieldCheck, textKey: "feature0" },
+    { icon: Globe, textKey: "feature1" },
+    { icon: Smartphone, textKey: "feature2" },
+    { icon: Clock, textKey: "feature3" },
+    { icon: RefreshCw, textKey: "feature4" },
+    { icon: Check, textKey: "feature5" },
   ];
 
   return (
@@ -36,7 +38,7 @@ export function Trust() {
               transition={{ delay: i * 0.05 }}
             >
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide">{stat.label}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide">{t(stat.labelKey)}</div>
             </motion.div>
           ))}
         </div>
@@ -52,7 +54,7 @@ export function Trust() {
               className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
             >
               <feature.icon className="text-green-500" size={18} />
-              <span className="text-sm font-medium text-gray-300">{feature.text}</span>
+              <span className="text-sm font-medium text-gray-300">{t(feature.textKey)}</span>
             </motion.div>
           ))}
         </div>

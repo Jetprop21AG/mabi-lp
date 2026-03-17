@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Terminal, Database, Shield, Cpu, Code2, Network } from "lucide-react";
 
 export function UnderTheHood() {
+  const t = useTranslations("UnderTheHood");
   const stats = [
-    { label: "Linie kodu", value: "236k+", icon: Code2, color: "text-blue-400" },
-    { label: "Endpointy API", value: "105+", icon: Network, color: "text-green-400" },
-    { label: "Architektura", value: "Multi-tenant", icon: Database, color: "text-purple-400" },
-    { label: "Izolacja danych", value: "W pełni", icon: Shield, color: "text-red-400" },
+    { labelKey: "codeLines", value: "236k+", icon: Code2, color: "text-blue-400" },
+    { labelKey: "apiEndpoints", value: "105+", icon: Network, color: "text-green-400" },
+    { labelKey: "architecture", value: "Multi-tenant", icon: Database, color: "text-purple-400" },
+    { labelKey: "dataIsolation", value: "full", icon: Shield, color: "text-red-400" },
   ];
 
   return (
@@ -27,19 +29,17 @@ export function UnderTheHood() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-gray-700 bg-gray-800/50 text-gray-300 text-sm font-medium">
                 <Terminal size={14} />
-                Dla CTO & IT Directorów
+                {t("badge")}
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Pod maską.</h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-                MABI to nie jest kolejny nakładkowy CRM. To potężny, natywny chmurowy silnik (AI-native ERP) stworzony do przetwarzania milionów operacji bez zadyszki.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">{t("title")}</h2>
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">{t("subtitle")}</p>
               
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat, i) => (
                   <div key={i} className="flex flex-col gap-2">
                     <stat.icon className={`${stat.color}`} size={24} />
-                    <span className="text-2xl font-mono font-bold text-white">{stat.value}</span>
-                    <span className="text-sm text-gray-500">{stat.label}</span>
+                    <span className="text-2xl font-mono font-bold text-white">{stat.value === "full" ? t("dataIsolationValue") : stat.value}</span>
+                    <span className="text-sm text-gray-500">{t(stat.labelKey)}</span>
                   </div>
                 ))}
               </div>

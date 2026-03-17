@@ -1,58 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Package, Wrench, Wallet, Truck, Database, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Mail, Package, Wrench, Wallet, Truck, Database } from "lucide-react";
 
 export function AiSection() {
+  const t = useTranslations("AiSection");
   const watchers = [
-    {
-      title: "Poczta",
-      desc: "Klasyfikuje maile, wyciąga faktury, routuje do działów.",
-      icon: Mail,
-      color: "text-blue-400",
-      bg: "bg-blue-500/10",
-      border: "border-blue-500/20"
-    },
-    {
-      title: "Magazyn",
-      desc: "\"Łożysk zostało na 3 dni. Zamówić?\"",
-      icon: Package,
-      color: "text-yellow-400",
-      bg: "bg-yellow-500/10",
-      border: "border-yellow-500/20"
-    },
-    {
-      title: "Utrzymanie",
-      desc: "\"Przegląd sprężarki za 3 dni.\"",
-      icon: Wrench,
-      color: "text-red-400",
-      bg: "bg-red-500/10",
-      border: "border-red-500/20"
-    },
-    {
-      title: "Budżety",
-      desc: "\"Dział UR na 87% budżetu. Uwaga.\"",
-      icon: Wallet,
-      color: "text-green-400",
-      bg: "bg-green-500/10",
-      border: "border-green-500/20"
-    },
-    {
-      title: "Dostawy",
-      desc: "\"Zamówienie 3 dni po terminie. Przypomnieć?\"",
-      icon: Truck,
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
-      border: "border-purple-500/20"
-    },
-    {
-      title: "PIM",
-      desc: "\"Produkt opublikowany z 35% danych. Uzupełnić?\"",
-      icon: Database,
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
-      border: "border-pink-500/20"
-    }
+    { key: "mail", icon: Mail, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+    { key: "warehouse", icon: Package, color: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/20" },
+    { key: "maintenance", icon: Wrench, color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/20" },
+    { key: "budgets", icon: Wallet, color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
+    { key: "delivery", icon: Truck, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+    { key: "pim", icon: Database, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" }
   ];
 
   return (
@@ -67,15 +27,14 @@ export function AiSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
              </span>
-             Mózg systemu MABI
+             {t("badge")}
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            AI nie jest dodatkiem.<br/>
-            To <span className="text-red-500">mózg</span> MABI.
+            {t("title1")}<br/>
+            {t("title2")} <span className="text-red-500">{t("titleHighlight")}</span> {t("title3")}
           </h2>
           <p className="text-xl text-gray-400">
-            6 obserwatorów działa 24/7. Jedno miejsce. Zero szukania po modułach.
-            AI przynosi Ci to co ważne → Ty decydujesz jednym kliknięciem.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -94,9 +53,9 @@ export function AiSection() {
                   <watcher.icon className={watcher.color} size={24} />
                 </div>
                 <div>
-                  <h3 className={`text-lg font-bold mb-2 ${watcher.color}`}>{watcher.title}</h3>
+                  <h3 className={`text-lg font-bold mb-2 ${watcher.color}`}>{t(`watchers.${watcher.key}.title`)}</h3>
                   <p className="text-gray-300 leading-relaxed font-medium">
-                    {watcher.desc}
+                    {t(`watchers.${watcher.key}.desc`)}
                   </p>
                 </div>
               </div>
@@ -110,24 +69,24 @@ export function AiSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-4">
-                To nie jest kolejny chatbot. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">To zespół agentów (Multi-LLM).</span>
+                {t("langGraphTitle1")} <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">{t("langGraphTitle2")}</span>
               </h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                MABI wykorzystuje orkiestrację <strong>LangGraph</strong>. Zamiast jednego, ogólnego modelu sztucznej inteligencji, zatrudniamy wyspecjalizowanych agentów współpracujących ze sobą w czasie rzeczywistym.
+                {t("langGraphDesc")}
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-blue-400 text-xs">1</span></div>
-                  <p className="text-sm text-gray-300">Jeden model analizuje dokumenty finansowe.</p>
+                  <p className="text-sm text-gray-300">{t("langGraph1")}</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-purple-400 text-xs">2</span></div>
-                  <p className="text-sm text-gray-300">Drugi optymalizuje trasy dostaw na magazynie.</p>
+                  <p className="text-sm text-gray-300">{t("langGraph2")}</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-red-400 text-xs">3</span></div>
-                  <p className="text-sm text-gray-300">LangGraph nadzoruje ich współpracę i podejmuje ostateczną decyzję w ułamku sekundy.</p>
+                  <p className="text-sm text-gray-300">{t("langGraph3")}</p>
                 </li>
               </ul>
             </div>

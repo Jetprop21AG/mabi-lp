@@ -1,58 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { CompetitorComparison } from "./competitor-comparison";
 
 export function Pricing() {
+  const t = useTranslations("Pricing");
   const plans = [
     {
+      key: "starter",
       name: "STARTER",
       price: "2 990 zł",
-      period: "/msc",
-      description: "Dla małych firm produkcyjnych i handlowych.",
-      features: [
-        "PIM (Zarządzanie produktami)",
-        "WMS (Magazyn)",
-        "Podstawowe raporty",
-        "Do 5 użytkowników",
-        "Do 5 000 SKU",
-        "Wsparcie email",
-      ],
+      descriptionKey: "starter",
+      featuresKey: "starter",
       highlight: false,
     },
     {
+      key: "business",
       name: "BUSINESS",
       price: "7 990 zł",
-      period: "/msc",
-      description: "Pełna platforma dla rosnących firm.",
-      features: [
-        "Wszystko co w STARTER",
-        "MES (Produkcja)",
-        "CRM (Sprzedaż)",
-        "Finanse i Budżetowanie",
-        "AI Hub (Obserwatorzy)",
-        "Do 20 użytkowników",
-        "Do 20 000 SKU",
-        "Wsparcie priorytetowe",
-      ],
+      descriptionKey: "business",
+      featuresKey: "business",
       highlight: true,
-      badge: "Najczęściej wybierany",
+      badgeKey: "business",
     },
     {
+      key: "enterprise",
       name: "ENTERPRISE",
       price: "12 990 zł",
-      period: "/msc",
-      description: "Dla dużych organizacji wymagających skali.",
-      features: [
-        "Wszystkie 16 modułów",
-        "Nieograniczeni użytkownicy",
-        "Nieograniczone SKU",
-        "Dedykowany opiekun",
-        "SLA 99.9%",
-        "Dedykowana infrastruktura (opcja)",
-      ],
+      descriptionKey: "enterprise",
+      featuresKey: "enterprise",
       highlight: false,
     },
   ];
@@ -61,11 +40,8 @@ export function Pricing() {
     <section id="pricing" className="py-32 bg-black relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Prosty cennik.</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Za jedną platformę płacisz mniej niż za sam HubSpot CRM.
-            A dostajesz PIM + MES + WMS + CRM + Finance + AI.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t("title")}</h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t("subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -84,7 +60,7 @@ export function Pricing() {
             >
               {plan.highlight && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                  {plan.badge}
+                  {t(`plans.${plan.badgeKey}.badge`)}
                 </div>
               )}
               
@@ -92,18 +68,22 @@ export function Pricing() {
                 <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-400">{plan.period}</span>
+                  <span className="text-gray-400">{t("period")}</span>
                 </div>
-                <p className="text-gray-400 mt-4 text-sm">{plan.description}</p>
+                <p className="text-gray-400 mt-4 text-sm">{t(`plans.${plan.descriptionKey}.description`)}</p>
               </div>
 
               <ul className="space-y-4 mb-8 flex-1">
-                {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-3 text-gray-300 text-sm">
-                    <Check className="text-green-500 shrink-0 mt-0.5" size={16} />
-                    {feature}
-                  </li>
-                ))}
+                {[0,1,2,3,4,5,6,7].map((j) => {
+                  const feat = t(`plans.features.${plan.featuresKey}.${j}`);
+                  if (!feat || feat.includes("plans.features")) return null;
+                  return (
+                    <li key={j} className="flex items-start gap-3 text-gray-300 text-sm">
+                      <Check className="text-green-500 shrink-0 mt-0.5" size={16} />
+                      {feat}
+                    </li>
+                  );
+                })}
               </ul>
 
               <button
@@ -113,7 +93,7 @@ export function Pricing() {
                     : "bg-white/10 hover:bg-white/20 text-white"
                 }`}
               >
-                Wybierz pakiet
+                {t("selectPlan")}
               </button>
             </motion.div>
           ))}

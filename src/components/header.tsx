@@ -74,16 +74,16 @@ export function Header() {
           </div>
 
           <Link href="/#features" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Funkcje
+            {t("features")}
           </Link>
           <Link href="/cennik" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             {t("pricing")}
           </Link>
           <Link href="/demo" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Demo
+            {t("demo")}
           </Link>
           <Link href="/kontakt" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Kontakt
+            {t("contact")}
           </Link>
         </nav>
 
@@ -140,7 +140,7 @@ export function Header() {
             className="text-lg font-medium text-gray-300 hover:text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Funkcje
+            {t("features")}
           </Link>
           <Link 
             href="/cennik" 
@@ -154,14 +154,14 @@ export function Header() {
             className="text-lg font-medium text-gray-300 hover:text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Demo
+            {t("demo")}
           </Link>
           <Link 
             href="/kontakt" 
             className="text-lg font-medium text-gray-300 hover:text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Kontakt
+            {t("contact")}
           </Link>
           <div className="h-px bg-white/10 my-2" />
           <div className="flex justify-between items-center">

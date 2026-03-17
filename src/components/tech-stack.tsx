@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function TechStackBanner() {
+  const t = useTranslations("TechStack");
   const technologies = [
     { name: "Next.js", icon: "▲" },
     { name: "LangGraph", icon: "⚡" },
@@ -17,8 +19,8 @@ export function TechStackBanner() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="md:w-1/3 text-center md:text-left">
-            <h3 className="text-xl font-bold mb-2 text-white">Zbudowane na stacku 2026.</h3>
-            <p className="text-sm text-gray-500">Nie na frameworku z 2005 roku.</p>
+            <h3 className="text-xl font-bold mb-2 text-white">{t("title")}</h3>
+            <p className="text-sm text-gray-500">{t("subtitle")}</p>
           </div>
           
           <div className="md:w-2/3 w-full overflow-hidden relative">

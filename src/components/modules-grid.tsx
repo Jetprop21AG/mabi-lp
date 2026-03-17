@@ -2,41 +2,34 @@
 
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { 
   Package, Users, Factory, Warehouse, ShoppingCart, Wrench, 
   MessageSquare, FileText, Smartphone, ClipboardCheck, Briefcase, FileInput, Landmark
 } from "lucide-react";
 
 export function ModulesGrid() {
+  const t = useTranslations("ModulesGrid");
   const modules = [
-    // Dane i Produkty
-    { title: "PIM", desc: "Produkty i cenniki", details: "Zarządzanie katalogiem, wariantami i cennikami w jednym miejscu.", icon: Package, link: "/modules/pim", category: "Dane" },
-    { title: "DMS", desc: "Obieg dokumentów", details: "Centralne repozytorium, wersjonowanie i OCR dokumentów.", icon: FileText, link: "/modules/dms", category: "Dane" },
-    { title: "Import Hub", desc: "Inteligentny import", details: "Import danych z Excel/XML/PDF z mapowaniem AI.", icon: FileInput, link: "/modules/import-hub", category: "Dane" },
-    
-    // Sprzedaż
-    { title: "CRM", desc: "Klienci i sprzedaż", details: "Lejek sprzedaży, historia kontaktów i automatyzacja follow-upów.", icon: Users, link: "/modules/crm", category: "Sprzedaż" },
-    { title: "e-Commerce", desc: "Sklep online B2B/B2C", details: "Sklep zintegrowany z PIM i WMS w czasie rzeczywistym.", icon: ShoppingCart, link: "/modules/e-commerce", category: "Sprzedaż" },
-    { title: "B2B Platform", desc: "Portal partnera", details: "Samoobsługowy panel zamawiania dla Twoich kontrahentów.", icon: Smartphone, link: "/modules/b2b-platform", category: "Sprzedaż" },
-    { title: "Field Sales", desc: "Mobilny handlowiec", details: "Aplikacja dla handlowców w terenie (PWA).", icon: Briefcase, link: "/modules/field-sales", category: "Sprzedaż" },
-
-    // Operacje
-    { title: "MES", desc: "Produkcja i BOM", details: "Planowanie produkcji, śledzenie zleceń i zarządzanie zasobami.", icon: Factory, link: "/modules/mes", category: "Operacje" },
-    { title: "WMS", desc: "Magazyn i logistyka", details: "Optymalizacja stanów, kompletacja zamówień i wysyłki.", icon: Warehouse, link: "/modules/wms", category: "Operacje" },
-    { title: "QR Maintenance", desc: "Utrzymanie ruchu", details: "Skanuj kody QR maszyn, zgłaszaj awarie, planuj przeglądy.", icon: Wrench, link: "/modules/qr-maintenance", category: "Operacje" },
-    { title: "Quality Control", desc: "Kontrola jakości", details: "Checklisty QC, pomiary i certyfikaty jakości.", icon: ClipboardCheck, link: "/modules/quality-control", category: "Operacje" },
-    { title: "Procurement", desc: "Zakupy", details: "Zapotrzebowania, zamówienia i akceptacja kosztów.", icon: ShoppingCart, link: "/modules/procurement", category: "Operacje" },
-
-    // Finanse
-    { title: "Finance", desc: "Księgowość", details: "Faktury, koszty, środki trwałe, budżetowanie.", icon: Landmark, link: "/modules/finance", category: "Finanse" },
-    { title: "KSeF", desc: "E-faktury", details: "Integracja z Krajowym Systemem e-Faktur.", icon: FileText, link: "/modules/ksef", category: "Finanse" },
-
-    // Zarządzanie
-    { title: "Projects", desc: "Zarządzanie projektami", details: "Harmonogramy, zadania i delegowanie pracy w zespole.", icon: Briefcase, link: "/modules/projects", category: "Zarządzanie" },
-    { title: "AI Hub", desc: "Agenci AI", details: "Autonomiczni agenci wspierający każdy dział firmy.", icon: MessageSquare, link: "/modules/ai-hub", category: "Zarządzanie" },
+    { title: "PIM", icon: Package, link: "/modules/pim", category: "Dane" },
+    { title: "DMS", icon: FileText, link: "/modules/dms", category: "Dane" },
+    { title: "Import Hub", icon: FileInput, link: "/modules/import-hub", category: "Dane" },
+    { title: "CRM", icon: Users, link: "/modules/crm", category: "Sprzedaż" },
+    { title: "e-Commerce", icon: ShoppingCart, link: "/modules/e-commerce", category: "Sprzedaż" },
+    { title: "B2B Platform", icon: Smartphone, link: "/modules/b2b-platform", category: "Sprzedaż" },
+    { title: "Field Sales", icon: Briefcase, link: "/modules/field-sales", category: "Sprzedaż" },
+    { title: "MES", icon: Factory, link: "/modules/mes", category: "Operacje" },
+    { title: "WMS", icon: Warehouse, link: "/modules/wms", category: "Operacje" },
+    { title: "QR Maintenance", icon: Wrench, link: "/modules/qr-maintenance", category: "Operacje" },
+    { title: "Quality Control", icon: ClipboardCheck, link: "/modules/quality-control", category: "Operacje" },
+    { title: "Procurement", icon: ShoppingCart, link: "/modules/procurement", category: "Operacje" },
+    { title: "Finance", icon: Landmark, link: "/modules/finance", category: "Finanse" },
+    { title: "KSeF", icon: FileText, link: "/modules/ksef", category: "Finanse" },
+    { title: "Projects", icon: Briefcase, link: "/modules/projects", category: "Zarządzanie" },
+    { title: "AI Hub", icon: MessageSquare, link: "/modules/ai-hub", category: "Zarządzanie" },
   ];
 
-  const categories = ["Dane", "Sprzedaż", "Operacje", "Finanse", "Zarządzanie"];
+  const categories = ["Dane", "Sprzedaż", "Operacje", "Finanse", "Zarządzanie"] as const;
 
   return (
     <section id="features" className="py-32 bg-black relative">
@@ -44,17 +37,13 @@ export function ModulesGrid() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            16 modułów. Jeden system.
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Kompletny ekosystem do zarządzania nowoczesną firmą produkcyjną i handlową.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t("title")}</h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t("subtitle")}</p>
         </div>
         
         {categories.map((category) => (
             <div key={category} className="mb-16">
-                <h3 className="text-2xl font-bold text-gray-500 mb-8 border-b border-white/10 pb-2">{category}</h3>
+                <h3 className="text-2xl font-bold text-gray-500 mb-8 border-b border-white/10 pb-2">{t(`categories.${category}`)}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {modules.filter(m => m.category === category).map((module, i) => (
                     <motion.div
@@ -68,7 +57,7 @@ export function ModulesGrid() {
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-transparent to-transparent group-hover:from-red-500/5 transition-all duration-500" />
                       
                       {module.link && (
-                        <Link href={module.link} className="absolute inset-0 z-20" aria-label={`Przejdź do modułu ${module.title}`} />
+                        <Link href={module.link} className="absolute inset-0 z-20" aria-label={`${t("goToModule")} ${module.title}`} />
                       )}
                       
                       <div className="relative z-10 pointer-events-none">
@@ -77,12 +66,12 @@ export function ModulesGrid() {
                         </div>
                         
                         <h3 className="text-lg font-bold mb-1 group-hover:text-white transition-colors">{module.title}</h3>
-                        <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{module.desc}</p>
+                        <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{t(`modules.${module.title}.desc`)}</p>
                       </div>
                       
                       <div className="relative z-10 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pointer-events-none">
                           <p className="text-xs text-gray-500 pt-4 border-t border-white/10 leading-relaxed">
-                            {module.details}
+                            {t(`modules.${module.title}.details`)}
                           </p>
                       </div>
                     </motion.div>
