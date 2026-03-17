@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 
+import { CompetitorComparison } from "./competitor-comparison";
+
 export function Pricing() {
   const plans = [
     {
@@ -117,82 +119,7 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Comparison Table */}
-        <div className="mt-32 overflow-x-auto">
-            <h3 className="text-3xl font-bold text-center mb-12">Porównanie z rynkiem</h3>
-            <div className="min-w-[800px] bg-[#111] rounded-2xl border border-white/10 p-8">
-                <table className="w-full text-left border-collapse">
-                    <thead>
-                        <tr className="border-b border-white/10">
-                            <th className="p-4 text-gray-400 font-medium">Funkcja</th>
-                            <th className="p-4 text-white font-bold text-lg bg-blue-900/10 rounded-t-xl border-t border-x border-blue-500/20">MABI</th>
-                            <th className="p-4 text-gray-400">Comarch XL</th>
-                            <th className="p-4 text-gray-400">SAP B1</th>
-                            <th className="p-4 text-gray-400">HubSpot + Akeneo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">Cena all-in/msc</td>
-                            <td className="p-4 text-blue-400 font-bold bg-blue-900/10 border-x border-blue-500/20">od 7 990 zł</td>
-                            <td className="p-4 text-gray-500">~15 000 zł*</td>
-                            <td className="p-4 text-gray-500">~20 000 zł*</td>
-                            <td className="p-4 text-gray-500">~20 000 zł+</td>
-                        </tr>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">PIM + e-Commerce</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅ Native</td>
-                            <td className="p-4 text-gray-500">❌ Brak PIM</td>
-                            <td className="p-4 text-gray-500">❌ Brak PIM</td>
-                            <td className="p-4 text-gray-500">✅ Osobne systemy</td>
-                        </tr>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">AI wbudowane</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅ LangGraph</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                        </tr>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">Mobile Field Sales</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅ PWA</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">⚠️ Basic</td>
-                        </tr>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">WMS Terminal</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅ PWA</td>
-                            <td className="p-4 text-gray-500">⚠️ Osobny system</td>
-                            <td className="p-4 text-gray-500">⚠️</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                        </tr>
-                        <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">KSeF native</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅</td>
-                            <td className="p-4 text-gray-500">✅</td>
-                            <td className="p-4 text-gray-500">⚠️ Partner</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                        </tr>
-                         <tr className="border-b border-white/5">
-                            <td className="p-4 text-gray-300">OCR faktur</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-blue-500/20">✅ AI</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                            <td className="p-4 text-gray-500">❌</td>
-                        </tr>
-                         <tr>
-                            <td className="p-4 text-gray-300">Wdrożenie</td>
-                            <td className="p-4 text-white bg-blue-900/10 border-x border-b border-blue-500/20 rounded-b-xl">2-4 tyg</td>
-                            <td className="p-4 text-gray-500">3-12 msc</td>
-                            <td className="p-4 text-gray-500">3-12 msc</td>
-                            <td className="p-4 text-gray-500">1-3 msc</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p className="mt-4 text-xs text-gray-600 text-center">*TCO (Total Cost of Ownership) uwzględniając licencję, wdrożenie i roczne utrzymanie.</p>
-            </div>
-        </div>
+        <CompetitorComparison />
       </div>
     </section>
   );
