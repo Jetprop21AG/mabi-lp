@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MABI Landing Page
+
+This is the marketing landing page for MABI — Moving Ahead by Innovation.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Runtime**: Bun
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   bun install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   bun run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Open [http://localhost:3003](http://localhost:3003) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: App Router pages and layout
+- `src/components`: Reusable UI components
+- `src/app/globals.css`: Global styles and Tailwind v4 configuration
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The project is configured for Vercel deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Static Export vs API Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project includes an API route for the contact form (`/api/contact`).
+By default, `output: "export"` is commented out in `next.config.ts` to allow API routes to function.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you need a purely static export (for hosting on S3, GitHub Pages, etc.), uncomment `output: "export"` in `next.config.ts`.
+Note that API routes will NOT work in static export mode. You will need to handle form submissions via an external service or serverless functions deployed separately.
