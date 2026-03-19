@@ -6,8 +6,9 @@ import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./language-toggle";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 
-export function Header() {
+export function Header({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const isLight = variant === "light";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModulesOpen, setIsModulesOpen] = useState(false); // For mobile
   const t = useTranslations("Header");
@@ -43,13 +44,15 @@ export function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-white/5"
+          ? isLight
+            ? "bg-white/95 backdrop-blur-md border-b border-gray-200"
+            : "bg-black/80 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold tracking-tight flex items-center gap-2">
-          <span className="text-white">MABI</span>
+          <span className={isLight ? "text-gray-900" : "text-white"}>MABI</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -57,7 +60,7 @@ export function Header() {
           
           {/* Modules Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-white transition-colors py-4">
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-4 ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}>
               {t("modules")} <ChevronDown size={14} />
             </button>
             <div className="absolute top-full left-0 w-[400px] bg-black border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-4 grid grid-cols-2 gap-2">
@@ -73,16 +76,16 @@ export function Header() {
             </div>
           </div>
 
-          <Link href="/#features" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+          <Link href="/#features" className={`text-sm font-medium transition-colors ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}>
             {t("features")}
           </Link>
-          <Link href="/cennik" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+          <Link href="/cennik" className={`text-sm font-medium transition-colors ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}>
             {t("pricing")}
           </Link>
-          <Link href="/demo" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+          <Link href="/demo" className={`text-sm font-medium transition-colors ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}>
             {t("demo")}
           </Link>
-          <Link href="/kontakt" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+          <Link href="/kontakt" className={`text-sm font-medium transition-colors ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}>
             {t("contact")}
           </Link>
         </nav>
@@ -99,7 +102,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-400 hover:text-white"
+          className={`md:hidden transition-colors ${isLight ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-white"}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
