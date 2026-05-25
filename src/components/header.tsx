@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./language-toggle";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 export function Header({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -92,12 +93,12 @@ export function Header({ variant = "dark" }: { variant?: "dark" | "light" }) {
 
         <div className="hidden md:flex items-center gap-4">
           <LanguageToggle />
-          <Link
-            href="/demo"
+          <a
+            href={siteConfig.registrationUrl}
             className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
           >
             {t("startFree")}
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -169,13 +170,13 @@ export function Header({ variant = "dark" }: { variant?: "dark" | "light" }) {
           <div className="h-px bg-white/10 my-2" />
           <div className="flex justify-between items-center">
             <LanguageToggle />
-            <Link
-              href="/demo"
+            <a
+              href={siteConfig.registrationUrl}
               className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t("startFree")}
-            </Link>
+            </a>
           </div>
         </div>
       )}

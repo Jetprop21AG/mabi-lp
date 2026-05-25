@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Mail, Package, Wrench, Wallet, Truck, Database } from "lucide-react";
+import { Mail, Package, Wrench, Wallet, Truck, Database, Phone } from "lucide-react";
 
 export function AiSection() {
   const t = useTranslations("AiSection");
@@ -12,7 +12,8 @@ export function AiSection() {
     { key: "maintenance", icon: Wrench, color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/20" },
     { key: "budgets", icon: Wallet, color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
     { key: "delivery", icon: Truck, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
-    { key: "pim", icon: Database, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" }
+    { key: "pim", icon: Database, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+    { key: "telephony", icon: Phone, color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" }
   ];
 
   return (
@@ -87,6 +88,10 @@ export function AiSection() {
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-red-400 text-xs">3</span></div>
                   <p className="text-sm text-gray-300">{t("langGraph3")}</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-cyan-400 text-xs">4</span></div>
+                  <p className="text-sm text-gray-300">{t("langGraph4")}</p>
                 </li>
               </ul>
             </div>

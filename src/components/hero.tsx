@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Play } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -68,19 +69,20 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
         >
-          <Link
-            href="/demo"
+          <a
+            href={siteConfig.registrationUrl}
             className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-blue-900/20"
           >
             {t("startFree")}
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <button
-            className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm cursor-pointer"
+          </a>
+          <Link
+            href="/demo"
+            className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
           >
             <Play size={20} className="fill-current" />
             {t("watchDemo")}
-          </button>
+          </Link>
         </motion.div>
 
         {/* Dashboard Mockup */}

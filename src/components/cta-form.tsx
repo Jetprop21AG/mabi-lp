@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { siteConfig } from "@/lib/site-config";
 
 export function CtaForm() {
   const t = useTranslations("CtaForm");
@@ -45,7 +46,22 @@ export function CtaForm() {
            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500" />
            
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{t("title")}</h2>
-          <p className="text-xl text-gray-400 mb-12">{t("subtitle")}</p>
+          <p className="text-xl text-gray-400 mb-8">{t("subtitle")}</p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <a
+              href={siteConfig.registrationUrl}
+              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
+            >
+              {t("startFree")} <ArrowRight />
+            </a>
+            <a
+              href="#demo-form"
+              className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-semibold text-lg transition-all"
+            >
+              {t("bookDemo")}
+            </a>
+          </div>
 
           {success ? (
             <motion.div
@@ -57,7 +73,7 @@ export function CtaForm() {
               <p>{t("thanksMessage")}</p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+            <form id="demo-form" onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
               <input
                 name="name"
                 type="text"
@@ -98,7 +114,14 @@ export function CtaForm() {
           )}
           
           <div className="mt-12 pt-8 border-t border-white/10 text-gray-500 text-sm">
-             {t("orWrite")} <a href="mailto:kontakt@mabi.pl" className="text-white hover:underline">kontakt@mabi.pl</a> | +48 XXX XXX XXX
+             {t("orWrite")}{" "}
+             <a href={`mailto:${siteConfig.contactEmail}`} className="text-white hover:underline">
+               {siteConfig.contactEmail}
+             </a>{" "}
+             |{" "}
+             <a href={`tel:${siteConfig.contactPhoneTel}`} className="text-white hover:underline">
+               {siteConfig.contactPhone}
+             </a>
           </div>
         </div>
       </div>

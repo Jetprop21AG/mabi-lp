@@ -9,7 +9,7 @@ export function Trust() {
   const stats = [
     { value: "17,500+", labelKey: "sku" },
     { value: "16", labelKey: "modules" },
-    { value: "6", labelKey: "aiWatchers" },
+    { value: "7", labelKey: "aiWatchers" },
     { value: "105+", labelKey: "apiEndpoints" },
     { value: "236k+", labelKey: "codeLines" },
     { value: "9", labelKey: "languages" },

@@ -21,12 +21,14 @@ export default function AiHubPage() {
           { title: "AI Import", description: "Wrzuć Excel/PDF od dostawcy, AI mapuje kolumny, rozpoznaje produkty, importuje" },
           { title: "AI Tłumaczenia", description: "Automatyczne tłumaczenie opisów na 9+ języków z zachowaniem kontekstu branżowego" },
           { title: "AI Klasyfikacja", description: "Automatyczne przypisywanie kategorii, tagów, atrybutów" },
+          { title: "Agent głosowy", description: "Odbiera połączenia, kwalifikuje leady, umawia demo — integracja Twilio/Telnyx" },
           { title: "AI Asystent", description: "Czat w systemie, zna twoje produkty, ceny, stany, zamówienia" },
           { title: "AI Quality Check", description: "Sprawdza kompletność danych, sugeruje uzupełnienia" }
         ]
       }}
       features={{
         items: [
+          "Agent głosowy AI — obsługa połączeń przychodzących (Twilio, Telnyx)",
           "Chat AI wbudowany w każdy moduł (PIM, CRM, MES...)",
           "Import dowolnego formatu (CSV, Excel, PDF, XML) z AI mapowaniem",
           "Tłumaczenia z pamięcią kontekstu (terminologia branżowa)",
@@ -40,6 +42,7 @@ export default function AiHubPage() {
         headers: ["Funkcja", "MABI AI Hub", "ChatGPT Enterprise", "Copilot M365", "Dedykowany dev"],
         rows: [
           { label: "Cena/msc", values: ["od 990 zł", "od $60/user", "od $30/user", "10-50k zł/msc"] },
+          { label: "Agent głosowy", values: ["✅ Twilio/Telnyx", "❌", "❌", "✅ (custom)"] },
           { label: "Zna twoje produkty", values: ["✅ RAG na PIM", "❌", "❌", "✅ (po wdrożeniu)"] },
           { label: "Import danych AI", values: ["✅", "❌", "❌", "✅ (custom)"] },
           { label: "Wbudowany w ERP", values: ["✅", "❌ Osobne narzędzie", "⚠️ Office only", "✅"] },

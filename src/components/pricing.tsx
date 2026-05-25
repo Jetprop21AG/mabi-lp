@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { CompetitorComparison } from "./competitor-comparison";
+import { siteConfig } from "@/lib/site-config";
 
 export function Pricing() {
   const t = useTranslations("Pricing");
@@ -86,15 +87,16 @@ export function Pricing() {
                 })}
               </ul>
 
-              <button
-                className={`w-full py-4 rounded-xl font-bold transition-all ${
+              <a
+                href={siteConfig.registrationUrl}
+                className={`w-full py-4 rounded-xl font-bold transition-all text-center block ${
                   plan.highlight
                     ? "bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/20"
                     : "bg-white/10 hover:bg-white/20 text-white"
                 }`}
               >
                 {t("selectPlan")}
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>

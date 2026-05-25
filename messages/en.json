@@ -12,7 +12,7 @@
     "badge": "MABI — Moving Ahead by Innovation",
     "title1": "AI that",
     "title2": "sees and thinks.",
-    "subtitle1": "The platform that unifies PIM, CRM, MES, WMS, Finance, and AI into one organism.",
+    "subtitle1": "The platform that unifies PIM, CRM, MES, WMS, Finance, telephony, and AI into one organism.",
     "subtitle2": "A system that doesn't just store data, but analyzes it and suggests decisions.",
     "startFree": "Start for free",
     "watchDemo": "Watch demo",
@@ -37,21 +37,23 @@
     "title2": "It's the",
     "titleHighlight": "brain",
     "title3": "of MABI.",
-    "subtitle": "6 watchers work 24/7. One place. Zero searching across modules. AI brings you what matters → You decide with one click.",
+    "subtitle": "7 watchers work 24/7. One place. Zero searching across modules. AI brings you what matters → You decide with one click.",
     "watchers": {
       "mail": { "title": "Mail", "desc": "Classifies emails, extracts invoices, routes to departments." },
       "warehouse": { "title": "Warehouse", "desc": "\"Bearings left for 3 days. Order?\"" },
       "maintenance": { "title": "Maintenance", "desc": "\"Compressor service due in 3 days.\"" },
       "budgets": { "title": "Budgets", "desc": "\"Maintenance dept at 87% budget. Attention.\"" },
       "delivery": { "title": "Deliveries", "desc": "\"Order 3 days overdue. Send reminder?\"" },
-      "pim": { "title": "PIM", "desc": "\"Product published with 35% data. Complete?\"" }
+      "pim": { "title": "PIM", "desc": "\"Product published with 35% data. Complete?\"" },
+      "telephony": { "title": "Telephony", "desc": "Voice agent answers calls, qualifies leads, and logs conversations in CRM." }
     },
     "langGraphTitle1": "This is not another chatbot.",
     "langGraphTitle2": "It's a team of agents (Multi-LLM).",
     "langGraphDesc": "MABI uses LangGraph orchestration. Instead of one general-purpose AI model, we employ specialized agents working together in real time.",
     "langGraph1": "One model analyzes financial documents.",
     "langGraph2": "Another optimizes warehouse delivery routes.",
-    "langGraph3": "LangGraph supervises their collaboration and makes the final decision in a fraction of a second."
+    "langGraph3": "A third agent handles voice calls (Twilio, Telnyx) and qualifies leads.",
+    "langGraph4": "LangGraph supervises their collaboration and makes the final decision in a fraction of a second."
   },
   "UnifiedFlows": {
     "title": "One flow, not silos",
@@ -103,7 +105,7 @@
       "PIM": { "desc": "Products and price lists", "details": "Catalog, variants and pricing management in one place." },
       "DMS": { "desc": "Document workflow", "details": "Central repository, versioning and document OCR." },
       "Import Hub": { "desc": "Smart import", "details": "Import from Excel/XML/PDF with AI mapping." },
-      "CRM": { "desc": "Customers and sales", "details": "Sales funnel, contact history and follow-up automation." },
+      "CRM": { "desc": "Customers and sales", "details": "Pipeline, VoIP (Twilio/Telnyx), call history, and automated follow-up sequences." },
       "e-Commerce": { "desc": "Online store B2B/B2C", "details": "Store integrated with PIM and WMS in real time." },
       "B2B Platform": { "desc": "Partner portal", "details": "Self-service ordering panel for your contractors." },
       "Field Sales": { "desc": "Mobile salesperson", "details": "App for field sales reps (PWA)." },
@@ -229,7 +231,9 @@
   },
   "CtaForm": {
     "title": "Ready for intelligent business?",
-    "subtitle": "Book a demo and see how AI agents can streamline your production.",
+    "subtitle": "Create a free account or book a demo with our team.",
+    "startFree": "Start for free",
+    "bookDemo": "Book a demo",
     "thanksTitle": "Thank you!",
     "thanksMessage": "We'll contact you within 24 hours.",
     "namePlaceholder": "Full name",
@@ -240,6 +244,10 @@
     "orWrite": "or email:",
     "errorAlert": "An error occurred while sending the form. Please try again."
   },
+  "DemoPage": {
+    "title": "Book a demo",
+    "subtitle": "See MABI in action. Or create an account and explore on your own."
+  },
   "Footer": {
     "tagline": "Moving Ahead by Innovation. A comprehensive business platform powered by artificial intelligence.",
     "product": "Product",
@@ -247,14 +255,11 @@
     "legal": "Legal",
     "features": "Features",
     "pricing": "Pricing",
-    "changelog": "Changelog",
-    "docs": "Documentation",
+    "demo": "Demo",
+    "startFree": "Start for free",
     "about": "About",
     "contact": "Contact",
-    "blog": "Blog",
-    "careers": "Careers",
-    "terms": "Terms",
-    "privacy": "Privacy Policy",
+    "app": "MABI App",
     "gdpr": "GDPR",
     "copyright": "© 2026 SALAG Sp. z o.o. All rights reserved.",
     "designed": "Designed for Manufacturing."

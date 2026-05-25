@@ -12,7 +12,7 @@ export default function CrmPage() {
         items: [
           "Kontakty w Outlook, notatki w telefonie, oferty w Wordzie",
           "Handlowiec odchodzi = wiedza o klientach znika",
-          "Brak widoczności: kto rozmawia z kim, na jakim etapie",
+          "Brak historii rozmów telefonicznych — każdy kontakt to nowa rozmowa od zera",
           "Raportowanie sprzedaży = ręczne zbieranie danych od 7 handlowców",
           "CRM (np. HubSpot) nie wie nic o Twoich produktach i produkcji"
         ]
@@ -21,6 +21,8 @@ export default function CrmPage() {
         items: [
           { title: "Pipeline sprzedaży", description: "Wizualny, drag & drop, customizowalne etapy" },
           { title: "Kontekst produktowy", description: "Oferta tworzona z produktów z PIM (aktualne ceny, zdjęcia, dostępność)" },
+          { title: "Telefonia VoIP", description: "Podłącz numery przez Twilio lub Telnyx — click-to-call, logowanie rozmów w CRM" },
+          { title: "Agenci głosowi AI", description: "Automatyczna obsługa części ruchu: kwalifikacja leadów, przekierowania, notatki z rozmowy" },
           { title: "Integracja z produkcją", description: "Widzisz czy możesz obiecać termin (dane z MES)" },
           { title: "Kategoryzacja", description: "Segmenty klientów (detal, sieci, B2B, export)" },
           { title: "Mobilny CRM", description: "Handlowiec w terenie ma pełny dostęp" },
@@ -32,11 +34,13 @@ export default function CrmPage() {
           "Zarządzanie kontaktami i firmami",
           "Pipeline z customizowalnymi etapami",
           "Ofertowanie z produktami z PIM (zawsze aktualne ceny)",
-          "Historia interakcji (maile, notatki, spotkania)",
-          "Raporty: konwersja, wartość pipeline, aktywność handlowców",
+          "Historia interakcji (maile, rozmowy telefoniczne, notatki, spotkania)",
+          "Integracja VoIP: Twilio i Telnyx (numery firmowe, click-to-call)",
+          "Nagrywanie i transkrypcja rozmów z automatycznym wpisem do CRM",
+          "Sekwencje i automatyzacje follow-up (email + telefon)",
           "Integracja z e-mail",
           "Segmentacja klientów (tagi, kategorie, scoring)",
-          "Przyszłościowo: AI scoring leadów, automatyzacja follow-upów"
+          "AI scoring leadów i podsumowania rozmów"
         ]
       }}
       comparison={{
@@ -45,6 +49,8 @@ export default function CrmPage() {
           { label: "Cena/msc", values: ["od 790 zł", "~10 000 zł", "od $5,000", "od 349 zł"] },
           { label: "Integracja z PIM", values: ["✅ Native", "❌", "❌", "❌"] },
           { label: "Kontekst produkcyjny", values: ["✅ MES data", "❌", "❌", "❌"] },
+          { label: "VoIP / telefonia", values: ["✅ Twilio + Telnyx", "❌ Add-on", "❌ Add-on", "⚠️ Integracja"] },
+          { label: "Agenci głosowi AI", values: ["✅ LangGraph", "❌", "❌", "❌"] },
           { label: "Email marketing", values: ["🔜 Roadmap", "✅", "✅ Add-on", "❌"] },
           { label: "Kreator maili", values: ["—", "⚠️ Słaby UX", "✅", "❌"] },
           { label: "Planowanie tras", values: ["🔜 Roadmap", "❌", "❌", "❌"] },
