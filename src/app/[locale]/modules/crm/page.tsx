@@ -55,7 +55,7 @@ export default function CrmPage() {
           { label: "Kreator maili", values: ["—", "⚠️ Słaby UX", "✅", "❌"] },
           { label: "Planowanie tras", values: ["🔜 Roadmap", "❌", "❌", "❌"] },
           { label: "Język PL", values: ["✅", "⚠️", "⚠️", "✅"] },
-          { label: "Dane w Polsce", values: ["✅", "❌ (USA/EU)", "❌ (USA)", "✅"] }
+          { label: "Dane w UE", values: ["✅", "⚠️ (USA/UE)", "❌ (USA)", "✅"] }
         ],
         footnote: "Dlaczego nie HubSpot? HubSpot jest świetny do marketingu B2B SaaS. Ale dla producenta nie zna twoich produktów, stanów magazynowych ani obłożenia produkcji. MABI CRM rozumie produkcję, bo jest częścią tego samego systemu."
       }}

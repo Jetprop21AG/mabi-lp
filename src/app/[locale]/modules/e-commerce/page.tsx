@@ -52,7 +52,7 @@ export default function EcommercePage() {
           { label: "B2B + B2C", values: ["✅ Jeden system", "⚠️ Shopify Plus ($2k+)", "⚠️ Pluginy", "✅", "⚠️ Pluginy"] },
           { label: "Multi-language", values: ["✅ AI z PIM", "⚠️ Ręczne", "⚠️ Plugin", "✅", "✅"] },
           { label: "Zamówienie → produkcja", values: ["✅ MES", "❌", "❌", "❌", "❌"] },
-          { label: "Dane w Polsce", values: ["✅", "❌ (USA)", "✅ (self-host)", "✅ (self-host)", "✅ (self-host)"] }
+          { label: "Dane w UE", values: ["✅", "❌ (USA)", "✅ (self-host)", "✅ (self-host)", "✅ (self-host)"] }
         ],
         footnote: "*WooCommerce/PrestaShop: \"darmowe\" ale hosting + pluginy + utrzymanie = 1-5k zł/msc. Osobny e-commerce to kolejny silos danych."
       }}
