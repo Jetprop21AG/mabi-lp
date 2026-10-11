@@ -40,12 +40,12 @@ export default function WmsPage() {
       comparison={{
         headers: ["Funkcja", "MABI WMS", "Comarch WMS", "SAP EWM", "WMS-y pudełkowe"],
         rows: [
-          { label: "Cena/msc", values: ["od 690 zł", "od 2 000 zł + licencja", "od $5,000", "500-1500 zł"] },
+          { label: "Cena/mies.", values: ["od 690 zł netto", "od 2 000 zł + licencja", "od $5,000", "500-1500 zł"] },
           { label: "Terminal mobilny", values: ["✅ PWA", "✅ Dedykowana apka", "✅", "⚠️ Różnie"] },
           { label: "Integracja PIM+MES", values: ["✅ Native", "❌ Osobne systemy", "❌", "❌"] },
           { label: "Inwentaryzacja ciągła", values: ["✅", "✅", "✅", "❌ Często"] },
           { label: "Bez instalacji", values: ["✅ Przeglądarka", "❌ Klient", "❌", "⚠️"] },
-          { label: "Wdrożenie", values: ["1-2 tyg", "1-3 msc", "3-6 msc", "1-4 tyg"] }
+          { label: "Wdrożenie", values: ["1-2 tyg.", "1-3 mies.", "3-6 mies.", "1-4 tyg."] }
         ]
       }}
       caseStudy={{

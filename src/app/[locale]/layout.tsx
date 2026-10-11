@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
@@ -16,13 +16,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "MABI — Moving Ahead by Innovation | AI Business Platform",
-  description: "MABI — My Artificial Business Intelligence. Zarządzaj produktami, klientami, produkcją i magazynem w jednym systemie z wbudowaną sztuczną inteligencją.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>;
+}): Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'Meta'});
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

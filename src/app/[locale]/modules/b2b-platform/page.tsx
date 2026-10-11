@@ -37,7 +37,7 @@ export default function B2bPlatformPage() {
       comparison={{
         headers: ["Funkcja", "MABI B2B", "Sana Commerce", "OroCommerce", "Dedykowany B2B"],
         rows: [
-          { label: "Wdrożenie", values: ["1-2 tygodnie", "3-6 msc", "6-12 msc", "6+ msc"] },
+          { label: "Wdrożenie", values: ["1-2 tygodnie", "3-6 mies.", "6-12 mies.", "6+ mies."] },
           { label: "Integracja PIM/CRM", values: ["✅ Native", "⚠️ Connector", "⚠️ Connector", "⚠️ Custom API"] },
           { label: "Real-time stany", values: ["✅ Z WMS", "⚠️", "⚠️", "⚠️"] },
           { label: "Cena", values: ["W abonamencie", "od €25k/rok", "od $40k/rok", "50k-200k zł"] }

@@ -13,7 +13,7 @@ export function Pricing() {
     {
       key: "starter",
       name: "STARTER",
-      price: "2 990 zł",
+      price: "2 990",
       descriptionKey: "starter",
       featuresKey: "starter",
       highlight: false,
@@ -21,7 +21,7 @@ export function Pricing() {
     {
       key: "business",
       name: "BUSINESS",
-      price: "7 990 zł",
+      price: "7 990",
       descriptionKey: "business",
       featuresKey: "business",
       highlight: true,
@@ -30,7 +30,7 @@ export function Pricing() {
     {
       key: "enterprise",
       name: "ENTERPRISE",
-      price: "12 990 zł",
+      price: "12 990",
       descriptionKey: "enterprise",
       featuresKey: "enterprise",
       highlight: false,
@@ -75,7 +75,7 @@ export function Pricing() {
               </div>
 
               <ul className="space-y-4 mb-8 flex-1">
-                {[0,1,2,3,4,5,6,7].map((j) => {
+                {[0,1,2,3,4,5,6,7,8,9].map((j) => {
                   const feat = t(`plans.features.${plan.featuresKey}.${j}`);
                   if (!feat || feat.includes("plans.features")) return null;
                   return (
@@ -97,9 +97,14 @@ export function Pricing() {
               >
                 {t("selectPlan")}
               </a>
+              <p className="mt-3 text-center text-xs text-gray-500">{t("trialNoteShort")}</p>
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-sm text-gray-500">
+          {t("netNote")} {t("trialNote")}
+        </p>
 
         <CompetitorComparison />
       </div>

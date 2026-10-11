@@ -41,7 +41,7 @@ export default function AiHubPage() {
       comparison={{
         headers: ["Funkcja", "MABI AI Hub", "ChatGPT Enterprise", "Copilot M365", "Dedykowany dev"],
         rows: [
-          { label: "Cena/msc", values: ["od 990 zł", "od $60/user", "od $30/user", "10-50k zł/msc"] },
+          { label: "Cena/mies.", values: ["od 990 zł netto", "od $60/user", "od $30/user", "10-50k zł/mies."] },
           { label: "Agent głosowy", values: ["✅ Twilio/Telnyx", "❌", "❌", "✅ (custom)"] },
           { label: "Zna twoje produkty", values: ["✅ RAG na PIM", "❌", "❌", "✅ (po wdrożeniu)"] },
           { label: "Import danych AI", values: ["✅", "❌", "❌", "✅ (custom)"] },

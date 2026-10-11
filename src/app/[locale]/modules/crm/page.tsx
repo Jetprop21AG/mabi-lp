@@ -46,7 +46,7 @@ export default function CrmPage() {
       comparison={{
         headers: ["Funkcja", "MABI CRM", "HubSpot Pro", "Salesforce", "Livespace"],
         rows: [
-          { label: "Cena/msc", values: ["od 790 zł", "~10 000 zł", "od $5,000", "od 349 zł"] },
+          { label: "Cena/mies.", values: ["od 790 zł netto", "~10 000 zł", "od $5,000", "od 349 zł"] },
           { label: "Integracja z PIM", values: ["✅ Native", "❌", "❌", "❌"] },
           { label: "Kontekst produkcyjny", values: ["✅ MES data", "❌", "❌", "❌"] },
           { label: "VoIP / telefonia", values: ["✅ Twilio + Telnyx", "❌ Add-on", "❌ Add-on", "⚠️ Integracja"] },
@@ -55,7 +55,7 @@ export default function CrmPage() {
           { label: "Kreator maili", values: ["—", "⚠️ Słaby UX", "✅", "❌"] },
           { label: "Planowanie tras", values: ["🔜 Roadmap", "❌", "❌", "❌"] },
           { label: "Język PL", values: ["✅", "⚠️", "⚠️", "✅"] },
-          { label: "Dane w Polsce", values: ["✅", "❌ (USA/EU)", "❌ (USA)", "✅"] }
+          { label: "Dane w UE", values: ["✅", "⚠️ (USA/UE)", "❌ (USA)", "✅"] }
         ],
         footnote: "Dlaczego nie HubSpot? HubSpot jest świetny do marketingu B2B SaaS. Ale dla producenta nie zna twoich produktów, stanów magazynowych ani obłożenia produkcji. MABI CRM rozumie produkcję, bo jest częścią tego samego systemu."
       }}

@@ -1,4 +1,8 @@
 {
+  "Meta": {
+    "title": "MABI — Moving Ahead by Innovation | AI Business Platform",
+    "description": "MABI — My Artificial Business Intelligence. Zarządzaj produktami, klientami, produkcją i magazynem w jednym systemie z wbudowaną sztuczną inteligencją. Dane w UE, ceny netto, 14 dni za darmo."
+  },
   "Header": {
     "modules": "Moduły",
     "features": "Funkcje",
@@ -15,6 +19,7 @@
     "subtitle1": "Platforma, która łączy PIM, CRM, MES, WMS, Finanse, telefonię i AI w jeden organizm.",
     "subtitle2": "System, który nie tylko przechowuje dane, ale analizuje je i sugeruje decyzje.",
     "startFree": "Rozpocznij za darmo",
+    "trialNote": "14 dni za darmo",
     "watchDemo": "Zobacz demo",
     "aiHub": "AI Hub",
     "aiHubDesc": "Analiza danych w czasie rzeczywistym",
@@ -174,15 +179,18 @@
   "Pricing": {
     "title": "Prosty cennik.",
     "subtitle": "Za jedną platformę płacisz mniej niż za sam HubSpot CRM. A dostajesz PIM + MES + WMS + CRM + Finance + AI.",
-    "period": "/msc",
+    "period": "zł netto/mies.",
+    "netNote": "Wszystkie ceny są cenami netto (bez VAT).",
+    "trialNote": "Każdy pakiet zaczynasz od 14 dni za darmo.",
+    "trialNoteShort": "14 dni za darmo",
     "selectPlan": "Wybierz pakiet",
     "plans": {
       "starter": { "description": "Dla małych firm produkcyjnych i handlowych.", "badge": "" },
       "business": { "description": "Pełna platforma dla rosnących firm.", "badge": "Najczęściej wybierany" },
       "enterprise": { "description": "Dla dużych organizacji wymagających skali.", "badge": "" },
       "features": {
-        "starter": { "0": "PIM (Zarządzanie produktami)", "1": "WMS (Magazyn)", "2": "Podstawowe raporty", "3": "Do 5 użytkowników", "4": "Do 5 000 SKU", "5": "Wsparcie email" },
-        "business": { "0": "Wszystko co w STARTER", "1": "MES (Produkcja)", "2": "CRM (Sprzedaż)", "3": "Finanse i Budżetowanie", "4": "AI Hub (Obserwatorzy)", "5": "Do 20 użytkowników", "6": "Do 20 000 SKU", "7": "Wsparcie priorytetowe" },
+        "starter": { "0": "PIM (Zarządzanie produktami)", "1": "WMS (Magazyn)", "2": "KSeF (e-faktury)", "3": "Podstawowe raporty", "4": "Do 5 użytkowników", "5": "Do 5 000 SKU", "6": "Wsparcie email" },
+        "business": { "0": "Wszystko co w STARTER", "1": "MES (Produkcja)", "2": "CRM (Sprzedaż)", "3": "Finanse i Budżetowanie", "4": "KSeF (e-faktury)", "5": "AI Hub (Obserwatorzy)", "6": "Do 20 użytkowników", "7": "Do 20 000 SKU", "8": "Wsparcie priorytetowe" },
         "enterprise": { "0": "Wszystkie 16 modułów", "1": "Nieograniczeni użytkownicy", "2": "Nieograniczone SKU", "3": "Dedykowany opiekun", "4": "SLA 99.9%", "5": "Dedykowana infrastruktura (opcja)" }
       }
     }
@@ -222,7 +230,7 @@
     "codeLines": "Linii kodu",
     "languages": "Języków produktowych",
     "noSwitch": "Przełączania systemów",
-    "feature0": "Dane w Polsce (Hetzner DE)",
+    "feature0": "Dane w UE (Hetzner, Niemcy)",
     "feature1": "Polski interface, KSeF, KŚT, JPK",
     "feature2": "PWA: działa na telefonie, tablecie, PDA",
     "feature3": "Wdrożenie od 2 tygodni",
@@ -231,8 +239,9 @@
   },
   "CtaForm": {
     "title": "Gotowy na inteligentny biznes?",
-    "subtitle": "Załóż konto za darmo albo umów demo z naszym zespołem.",
+    "subtitle": "Załóż konto na 14 dni za darmo albo umów demo z naszym zespołem.",
     "startFree": "Rozpocznij za darmo",
+    "trialNote": "14 dni za darmo",
     "bookDemo": "Umów demo",
     "thanksTitle": "Dziękujemy!",
     "thanksMessage": "Skontaktujemy się z Tobą w ciągu 24h.",
@@ -246,7 +255,7 @@
   },
   "DemoPage": {
     "title": "Umów się na demo",
-    "subtitle": "Zobacz, jak MABI działa w praktyce. Możesz też od razu założyć konto i przetestować samodzielnie."
+    "subtitle": "Zobacz, jak MABI działa w praktyce. Możesz też od razu założyć konto i testować samodzielnie przez 14 dni za darmo."
   },
   "Footer": {
     "tagline": "Moving Ahead by Innovation. Kompleksowa platforma biznesowa napędzana sztuczną inteligencją.",
@@ -256,7 +265,7 @@
     "features": "Funkcje",
     "pricing": "Cennik",
     "demo": "Demo",
-    "startFree": "Rozpocznij za darmo",
+    "startFree": "Rozpocznij za darmo (14 dni)",
     "about": "O nas",
     "contact": "Kontakt",
     "app": "Aplikacja MABI",

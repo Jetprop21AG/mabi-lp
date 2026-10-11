@@ -41,12 +41,12 @@ export default function MesPage() {
       comparison={{
         headers: ["Funkcja", "MABI MES", "Comarch XL Prod.", "SAP ME", "Opcenter"],
         rows: [
-          { label: "Cena/msc", values: ["od 1 290 zł", "Licencja + wdrożenie", "od $10,000", "od $8,000"] },
+          { label: "Cena/mies.", values: ["od 1 290 zł netto", "Licencja + wdrożenie", "od $10,000", "od $8,000"] },
           { label: "Terminal mobilny", values: ["✅ PWA", "❌ Desktop", "✅", "✅"] },
           { label: "QR Maintenance", values: ["✅", "❌", "⚠️ Add-on", "✅"] },
           { label: "Integracja z PIM", values: ["✅ Native", "❌", "❌", "❌"] },
           { label: "AI planowanie", values: ["🔜 Roadmap", "❌", "⚠️", "⚠️"] },
-          { label: "Wdrożenie", values: ["2-4 tyg", "3-12 msc", "6-18 msc", "6-12 msc"] },
+          { label: "Wdrożenie", values: ["2-4 tyg.", "3-12 mies.", "6-18 mies.", "6-12 mies."] },
           { label: "Interface PL", values: ["✅", "✅", "⚠️", "❌"] }
         ]
       }}

@@ -39,7 +39,7 @@ export default function QrMaintenancePage() {
         rows: [
           { label: "Integracja z MES", values: ["✅ Pełna", "❌", "❌", "⚠️"] },
           { label: "Zgłoszenia przez QR", values: ["✅", "✅", "✅", "❌"] },
-          { label: "Cena/msc", values: ["W pakiecie", "od $40/user", "od $45/user", "Licencja"] },
+          { label: "Cena/mies.", values: ["W pakiecie", "od $40/user", "od $45/user", "Licencja"] },
           { label: "Język PL", values: ["✅", "❌", "❌", "✅"] }
         ]
       }}

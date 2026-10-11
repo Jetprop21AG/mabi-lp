@@ -272,7 +272,7 @@ export function ModulePage({
             
             <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-12 text-sm font-medium text-gray-400">
               <span className="flex items-center gap-2">
-                <Check size={16} className="text-green-500" /> Dane w Polsce
+                <Check size={16} className="text-green-500" /> Dane w UE
               </span>
               <span className="flex items-center gap-2">
                 <Check size={16} className="text-green-500" /> Polski interface
