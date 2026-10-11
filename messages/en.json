@@ -182,8 +182,8 @@
       "business": { "description": "Full platform for growing companies.", "badge": "Most popular" },
       "enterprise": { "description": "For large organizations requiring scale.", "badge": "" },
       "features": {
-        "starter": { "0": "PIM (Product management)", "1": "WMS (Warehouse)", "2": "Basic reports", "3": "Up to 5 users", "4": "Up to 5,000 SKUs", "5": "Email support" },
-        "business": { "0": "Everything in STARTER", "1": "MES (Production)", "2": "CRM (Sales)", "3": "Finance and Budgeting", "4": "AI Hub (Watchers)", "5": "Up to 20 users", "6": "Up to 20,000 SKUs", "7": "Priority support" },
+        "starter": { "0": "PIM (Product management)", "1": "WMS (Warehouse)", "2": "KSeF (e-invoicing)", "3": "Basic reports", "4": "Up to 5 users", "5": "Up to 5,000 SKUs", "6": "Email support" },
+        "business": { "0": "Everything in STARTER", "1": "MES (Production)", "2": "CRM (Sales)", "3": "Finance and Budgeting", "4": "KSeF (e-invoicing)", "5": "AI Hub (Watchers)", "6": "Up to 20 users", "7": "Up to 20,000 SKUs", "8": "Priority support" },
         "enterprise": { "0": "All 16 modules", "1": "Unlimited users", "2": "Unlimited SKUs", "3": "Dedicated account manager", "4": "99.9% SLA", "5": "Dedicated infrastructure (option)" }
       }
     }

@@ -182,8 +182,8 @@
       "business": { "description": "Pełna platforma dla rosnących firm.", "badge": "Najczęściej wybierany" },
       "enterprise": { "description": "Dla dużych organizacji wymagających skali.", "badge": "" },
       "features": {
-        "starter": { "0": "PIM (Zarządzanie produktami)", "1": "WMS (Magazyn)", "2": "Podstawowe raporty", "3": "Do 5 użytkowników", "4": "Do 5 000 SKU", "5": "Wsparcie email" },
-        "business": { "0": "Wszystko co w STARTER", "1": "MES (Produkcja)", "2": "CRM (Sprzedaż)", "3": "Finanse i Budżetowanie", "4": "AI Hub (Obserwatorzy)", "5": "Do 20 użytkowników", "6": "Do 20 000 SKU", "7": "Wsparcie priorytetowe" },
+        "starter": { "0": "PIM (Zarządzanie produktami)", "1": "WMS (Magazyn)", "2": "KSeF (e-faktury)", "3": "Podstawowe raporty", "4": "Do 5 użytkowników", "5": "Do 5 000 SKU", "6": "Wsparcie email" },
+        "business": { "0": "Wszystko co w STARTER", "1": "MES (Produkcja)", "2": "CRM (Sprzedaż)", "3": "Finanse i Budżetowanie", "4": "KSeF (e-faktury)", "5": "AI Hub (Obserwatorzy)", "6": "Do 20 użytkowników", "7": "Do 20 000 SKU", "8": "Wsparcie priorytetowe" },
         "enterprise": { "0": "Wszystkie 16 modułów", "1": "Nieograniczeni użytkownicy", "2": "Nieograniczone SKU", "3": "Dedykowany opiekun", "4": "SLA 99.9%", "5": "Dedykowana infrastruktura (opcja)" }
       }
     }

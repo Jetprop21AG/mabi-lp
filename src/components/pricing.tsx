@@ -75,7 +75,7 @@ export function Pricing() {
               </div>
 
               <ul className="space-y-4 mb-8 flex-1">
-                {[0,1,2,3,4,5,6,7].map((j) => {
+                {[0,1,2,3,4,5,6,7,8,9].map((j) => {
                   const feat = t(`plans.features.${plan.featuresKey}.${j}`);
                   if (!feat || feat.includes("plans.features")) return null;
                   return (
