@@ -15,6 +15,7 @@
     "subtitle1": "The platform that unifies PIM, CRM, MES, WMS, Finance, telephony, and AI into one organism.",
     "subtitle2": "A system that doesn't just store data, but analyzes it and suggests decisions.",
     "startFree": "Start for free",
+    "trialNote": "14-day free trial",
     "watchDemo": "Watch demo",
     "aiHub": "AI Hub",
     "aiHubDesc": "Real-time data analysis",
@@ -176,6 +177,8 @@
     "subtitle": "For one platform you pay less than for HubSpot CRM alone. And you get PIM + MES + WMS + CRM + Finance + AI.",
     "period": "PLN net/month",
     "netNote": "All prices are net (VAT excluded).",
+    "trialNote": "Every plan starts with a 14-day free trial.",
+    "trialNoteShort": "14-day free trial",
     "selectPlan": "Choose plan",
     "plans": {
       "starter": { "description": "For small manufacturing and trading companies.", "badge": "" },
@@ -232,8 +235,9 @@
   },
   "CtaForm": {
     "title": "Ready for intelligent business?",
-    "subtitle": "Create a free account or book a demo with our team.",
+    "subtitle": "Create an account with a 14-day free trial or book a demo with our team.",
     "startFree": "Start for free",
+    "trialNote": "14-day free trial",
     "bookDemo": "Book a demo",
     "thanksTitle": "Thank you!",
     "thanksMessage": "We'll contact you within 24 hours.",
@@ -247,7 +251,7 @@
   },
   "DemoPage": {
     "title": "Book a demo",
-    "subtitle": "See MABI in action. Or create an account and explore on your own."
+    "subtitle": "See MABI in action. Or create an account and explore on your own with a 14-day free trial."
   },
   "Footer": {
     "tagline": "Moving Ahead by Innovation. A comprehensive business platform powered by artificial intelligence.",
@@ -257,7 +261,7 @@
     "features": "Features",
     "pricing": "Pricing",
     "demo": "Demo",
-    "startFree": "Start for free",
+    "startFree": "Start for free (14 days)",
     "about": "About",
     "contact": "Contact",
     "app": "MABI App",

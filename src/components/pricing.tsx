@@ -97,11 +97,14 @@ export function Pricing() {
               >
                 {t("selectPlan")}
               </a>
+              <p className="mt-3 text-center text-xs text-gray-500">{t("trialNoteShort")}</p>
             </motion.div>
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-gray-500">{t("netNote")}</p>
+        <p className="mt-10 text-center text-sm text-gray-500">
+          {t("netNote")} {t("trialNote")}
+        </p>
 
         <CompetitorComparison />
       </div>

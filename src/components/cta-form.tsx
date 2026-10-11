@@ -48,7 +48,7 @@ export function CtaForm() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{t("title")}</h2>
           <p className="text-xl text-gray-400 mb-8">{t("subtitle")}</p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
             <a
               href={siteConfig.registrationUrl}
               className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
@@ -62,6 +62,8 @@ export function CtaForm() {
               {t("bookDemo")}
             </a>
           </div>
+
+          <p className="text-sm text-gray-500 mb-12">{t("trialNote")}</p>
 
           {success ? (
             <motion.div

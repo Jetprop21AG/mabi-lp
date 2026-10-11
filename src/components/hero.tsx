@@ -67,7 +67,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4"
         >
           <a
             href={siteConfig.registrationUrl}
@@ -84,6 +84,15 @@ export function Hero() {
             {t("watchDemo")}
           </Link>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-sm text-gray-500 mb-20"
+        >
+          {t("trialNote")}
+        </motion.p>
 
         {/* Dashboard Mockup */}
         <motion.div
