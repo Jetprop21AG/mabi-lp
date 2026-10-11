@@ -13,7 +13,7 @@ export function Pricing() {
     {
       key: "starter",
       name: "STARTER",
-      price: "2 990 zł",
+      price: "2 990",
       descriptionKey: "starter",
       featuresKey: "starter",
       highlight: false,
@@ -21,7 +21,7 @@ export function Pricing() {
     {
       key: "business",
       name: "BUSINESS",
-      price: "7 990 zł",
+      price: "7 990",
       descriptionKey: "business",
       featuresKey: "business",
       highlight: true,
@@ -30,7 +30,7 @@ export function Pricing() {
     {
       key: "enterprise",
       name: "ENTERPRISE",
-      price: "12 990 zł",
+      price: "12 990",
       descriptionKey: "enterprise",
       featuresKey: "enterprise",
       highlight: false,
@@ -100,6 +100,8 @@ export function Pricing() {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-sm text-gray-500">{t("netNote")}</p>
 
         <CompetitorComparison />
       </div>

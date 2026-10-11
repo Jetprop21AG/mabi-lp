@@ -46,7 +46,7 @@ export default function CrmPage() {
       comparison={{
         headers: ["Funkcja", "MABI CRM", "HubSpot Pro", "Salesforce", "Livespace"],
         rows: [
-          { label: "Cena/msc", values: ["od 790 zł", "~10 000 zł", "od $5,000", "od 349 zł"] },
+          { label: "Cena/mies.", values: ["od 790 zł netto", "~10 000 zł", "od $5,000", "od 349 zł"] },
           { label: "Integracja z PIM", values: ["✅ Native", "❌", "❌", "❌"] },
           { label: "Kontekst produkcyjny", values: ["✅ MES data", "❌", "❌", "❌"] },
           { label: "VoIP / telefonia", values: ["✅ Twilio + Telnyx", "❌ Add-on", "❌ Add-on", "⚠️ Integracja"] },

@@ -40,12 +40,12 @@ export default function PimPage() {
       comparison={{
         headers: ["Funkcja", "MABI PIM", "Akeneo", "Pimcore", "Salsify"],
         rows: [
-          { label: "Cena/msc", values: ["od 990 zł", "od $2,500", "Open source*", "od $5,000"] },
+          { label: "Cena/mies.", values: ["od 990 zł netto", "od $2,500", "Open source*", "od $5,000"] },
           { label: "AI tłumaczenia", values: ["✅ Wbudowane", "❌ Plugin", "❌ Custom", "✅ Drogie"] },
           { label: "Import z ERP", values: ["✅ Native", "⚠️ Connector", "⚠️ Custom dev", "⚠️ Connector"] },
           { label: "Multi-channel sync", values: ["✅", "✅", "⚠️", "✅"] },
           { label: "Hierarchia 3-level", values: ["✅", "✅", "✅", "✅"] },
-          { label: "Wdrożenie", values: ["1-2 tyg", "2-6 msc", "3-6 msc", "2-4 msc"] },
+          { label: "Wdrożenie", values: ["1-2 tyg.", "2-6 mies.", "3-6 mies.", "2-4 mies."] },
           { label: "Język PL", values: ["✅ Native", "❌", "❌", "❌"] }
         ],
         footnote: "*Pimcore: open source, ale wdrożenie kosztuje 50-200k zł"

@@ -46,7 +46,7 @@ export default function EcommercePage() {
       comparison={{
         headers: ["Funkcja", "MABI e-Commerce", "Shopify", "WooCommerce", "Magento", "PrestaShop"],
         rows: [
-          { label: "Cena/msc", values: ["W pakiecie MABI", "od $79", "\"Darmowy\"*", "od $2,000", "\"Darmowy\"*"] },
+          { label: "Cena/mies.", values: ["W pakiecie MABI", "od $79", "\"Darmowy\"*", "od $2,000", "\"Darmowy\"*"] },
           { label: "Integracja z PIM", values: ["✅ Native", "❌ Plugin", "❌ Plugin", "⚠️ Drogi connector", "❌ Plugin"] },
           { label: "Real-time stany WMS", values: ["✅ Native", "❌", "❌", "⚠️", "❌"] },
           { label: "B2B + B2C", values: ["✅ Jeden system", "⚠️ Shopify Plus ($2k+)", "⚠️ Pluginy", "✅", "⚠️ Pluginy"] },
@@ -54,7 +54,7 @@ export default function EcommercePage() {
           { label: "Zamówienie → produkcja", values: ["✅ MES", "❌", "❌", "❌", "❌"] },
           { label: "Dane w UE", values: ["✅", "❌ (USA)", "✅ (self-host)", "✅ (self-host)", "✅ (self-host)"] }
         ],
-        footnote: "*WooCommerce/PrestaShop: \"darmowe\" ale hosting + pluginy + utrzymanie = 1-5k zł/msc. Osobny e-commerce to kolejny silos danych."
+        footnote: "*WooCommerce/PrestaShop: \"darmowe\" ale hosting + pluginy + utrzymanie = 1-5k zł/mies. Osobny e-commerce to kolejny silos danych."
       }}
       caseStudy={{
         quote: "Mieliśmy WooCommerce + Comarch + osobny B2B portal. Trzy systemy, trzy bazy produktów, ciągłe rozbieżności. Po przejściu na MABI — jeden PIM zasila wszystko. Dodaję produkt raz, pojawia się wszędzie.",

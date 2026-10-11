@@ -174,7 +174,8 @@
   "Pricing": {
     "title": "Simple pricing.",
     "subtitle": "For one platform you pay less than for HubSpot CRM alone. And you get PIM + MES + WMS + CRM + Finance + AI.",
-    "period": "/mo",
+    "period": "PLN net/month",
+    "netNote": "All prices are net (VAT excluded).",
     "selectPlan": "Choose plan",
     "plans": {
       "starter": { "description": "For small manufacturing and trading companies.", "badge": "" },
